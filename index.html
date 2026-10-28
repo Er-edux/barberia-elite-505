@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Sitio de demostración de una barbería ficticia: cortes, barba y afeitado clásico.">
+<title>Barbería Élite 505 | Sitio de ejemplo</title>
+<style>
+:root{--bg:#000;--panel:#141414;--line:#2b2b2b;--gold:#c8a24a;--gold2:#e4c373;--text:#fff;--muted:#b3b3b3;--serif:Georgia,"Noto Serif","Times New Roman",serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:68px;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:1rem/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:88px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+.wrap{max-width:960px;margin:auto;padding:0 20px}
+.muted{color:var(--muted)}
+h1,h2,h3{font-family:var(--serif);line-height:1.15}
+h2{font-size:clamp(1.8rem,7vw,2.5rem);margin-bottom:24px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+
+/* Encabezado y menú */
+header{position:fixed;inset:0 0 auto;z-index:10;background:rgba(0,0,0,.92);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-weight:700;color:var(--gold2);text-decoration:none;font-size:1.1rem}
+#btn-menu{background:none;border:0;color:var(--gold2);font-size:1.7rem;padding:8px;cursor:pointer}
+nav{display:none;position:absolute;top:60px;left:0;right:0;background:#000;border-bottom:1px solid var(--line);padding:4px 20px 12px}
+nav.open{display:block}
+nav a{display:block;padding:14px 0;text-decoration:none;border-bottom:1px solid var(--line)}
+@media(min-width:760px){#btn-menu{display:none}nav{display:flex;position:static;background:none;border:0;padding:0;gap:26px}nav a{border:0;padding:0}}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:99px;border:1px solid var(--gold);background:none;color:var(--gold2);font-family:inherit;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.solid{background:var(--gold);color:#000}
+.btn:active{transform:scale(.97)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Portada */
+.hero{min-height:88svh;display:flex;align-items:center;padding:110px 0 56px;border:0}
+.hero .wrap{width:100%}
+.hero h1{font-size:clamp(2.9rem,14vw,5.8rem);letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:1.2rem;max-width:26ch;margin:20px 0 28px}
+.note{margin-top:20px;font-size:.9rem;color:var(--muted)}
+.pole{position:relative;height:14px;overflow:hidden}
+.pole::before{content:"";position:absolute;inset:0 0 0 -60px;background:repeating-linear-gradient(135deg,var(--gold) 0 14px,#fff 14px 28px,#000 28px 42px);animation:giro 1.6s linear infinite}
+@keyframes giro{to{transform:translateX(59.4px)}}
+@media(prefers-reduced-motion:reduce){.pole::before{animation:none}}
+
+/* Lista de precios */
+.lista{list-style:none;padding:0;max-width:640px}
+.lista li{padding:16px 0;border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:baseline;gap:10px}
+.top h3{font-size:1.2rem}
+.dots{flex:1;min-width:16px;border-bottom:2px dotted #555}
+.price{font-family:var(--serif);font-size:1.3rem;color:var(--gold2)}
+.lista p{color:var(--muted);font-size:.95rem}
+
+/* Galería */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.tile,.big{background:repeating-linear-gradient(45deg,#141414 0 10px,#1b1b1b 10px 20px);border:1px solid var(--line);border-radius:4px;color:var(--gold2);display:grid;place-items:center;text-align:center;padding:12px}
+.tile{aspect-ratio:1;font:inherit;cursor:pointer}
+.tile:first-child{grid-column:span 2;aspect-ratio:2/1}
+@media(min-width:700px){.gal{grid-template-columns:repeat(3,1fr)}.tile:first-child{grid-row:span 2;aspect-ratio:auto}}
+.lb{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.94);display:grid;place-content:center;gap:16px;padding:20px;cursor:pointer}
+.lb[hidden]{display:none}
+.big{width:min(100%,560px);aspect-ratio:4/3;border-color:var(--gold);font-family:var(--serif);font-size:1.4rem}
+
+/* Horarios */
+.rows{max-width:420px}
+.row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}
+.row.today{color:var(--gold2);font-weight:600}
+.pill{display:inline-block;margin-bottom:12px;padding:4px 14px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.pill.on{border-color:var(--gold);color:var(--gold2)}
+
+/* Ubicación y contacto */
+#dir{font-family:var(--serif);font-size:1.4rem;margin-bottom:4px}
+#ubicacion .btn{margin-top:20px}
+.info{display:grid;gap:12px;margin-bottom:24px}
+form{display:grid;gap:12px;max-width:420px;margin-top:40px}
+label{display:grid;gap:4px;color:var(--muted);font-size:.95rem}
+input,select{height:48px;padding:0 12px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:6px;font:inherit;color-scheme:dark}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;min-height:52px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#inicio">Barbería Élite 505</a>
+    <nav id="nav">
+      <a href="#servicios">Servicios y precios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <h1>Barbería Élite 505</h1>
+      <p class="lead">Corte, barba y afeitado clásico con navaja.</p>
+      <div class="cta">
+        <a class="btn solid" data-wa="Hola, quiero reservar una cita. (Mensaje de prueba)">Reservar por WhatsApp</a>
+        <a class="btn" href="#servicios">Ver precios</a>
+      </div>
+      <p class="note">Sitio de demostración: negocio ficticio y datos de ejemplo.</p>
+    </div>
+  </section>
+  <div class="pole" aria-hidden="true"></div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <h2>Servicios y precios</h2>
+      <ul class="lista" id="lista"></ul>
+      <p class="note">Precios de ejemplo.</p>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="wrap">
+      <h2>Galería</h2>
+      <div class="gal">
+        <button class="tile" type="button">Foto de ejemplo 1</button>
+        <button class="tile" type="button">Foto de ejemplo 2</button>
+        <button class="tile" type="button">Foto de ejemplo 3</button>
+        <button class="tile" type="button">Foto de ejemplo 4</button>
+        <button class="tile" type="button">Foto de ejemplo 5</button>
+      </div>
+      <p class="note">Toca una imagen para ampliarla. Aquí irán las fotos reales del negocio.</p>
+    </div>
+  </section>
+
+  <section id="horarios">
+    <div class="wrap">
+      <h2>Horarios</h2>
+      <span class="pill" id="estado"></span>
+      <div class="rows" id="horas"></div>
+    </div>
+  </section>
+
+  <section id="ubicacion">
+    <div class="wrap">
+      <h2>Ubicación</h2>
+      <p id="dir"></p>
+      <p class="muted">Dirección ficticia de ejemplo.</p>
+      <a class="btn" id="mapa" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <h2>Contacto</h2>
+      <div class="info">
+        <p>WhatsApp: <strong id="tel"></strong><br><span class="muted">Número de ejemplo, no es real.</span></p>
+        <p>Correo: <a id="mail"></a></p>
+      </div>
+      <a class="btn solid" data-wa="Hola, tengo una consulta. (Mensaje de prueba)">Escribir por WhatsApp</a>
+
+      <form id="form">
+        <h3>Reserva en un minuto</h3>
+        <label>Tu nombre <input id="nombre" required autocomplete="name"></label>
+        <label>Servicio <select id="servicio" required><option value="">Elige un servicio</option></select></label>
+        <label>Fecha <input id="fecha" type="date" required></label>
+        <button class="btn solid" type="submit">Enviar reserva por WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="anio"></span> Barbería Élite 505. Sitio de demostración, negocio ficticio.</div>
+</footer>
+
+<a class="btn solid fab" data-wa="Hola, quiero información. (Mensaje de prueba)" aria-label="Escribir por WhatsApp">WhatsApp</a>
+
+<div class="lb" id="lb" hidden><div class="big" id="lb-img"></div><button class="btn" type="button">Cerrar</button></div>
+
+<script>
+/* ============ DATOS DEL NEGOCIO: CAMBIA SOLO ESTA PARTE ============ */
+const CONFIG = {
+  whatsapp: "50500000000",            // Número de EJEMPLO: código de país + número, sin + ni espacios
+  whatsappVisible: "+505 0000 0000",  // Cómo se muestra en pantalla
+  direccion: "Calle Ejemplo 123, Ciudad Ejemplo",
+  correo: "contacto@ejemplo.com",
+  servicios: [                        // [nombre, descripción, precio]
+    ["Corte clásico", "Tijera y máquina, con acabado limpio.", 8],
+    ["Arreglo de barba", "Perfilado, vapor y aceite.", 6],
+    ["Afeitado con toalla caliente", "Navaja y cuidado de la piel.", 10],
+    ["Corte y barba", "El combo más pedido.", 13],
+    ["Corte infantil", "Para menores de 12 años.", 6],
+    ["Experiencia Élite", "Corte, barba, mascarilla y masaje.", 20]
+  ],
+  horario: [                          // En orden desde domingo. [apertura, cierre] en formato 24 h; null = cerrado
+    ["Domingo", null],
+    ["Lunes", [9, 19]], ["Martes", [9, 19]], ["Miércoles", [9, 19]],
+    ["Jueves", [9, 19]], ["Viernes", [9, 20]], ["Sábado", [8, 17]]
+  ]
+};
+/* ==================================================================== */
+
+const $ = s => document.querySelector(s);
+const wa = texto => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(texto)}`;
+
+// Botones de WhatsApp
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = wa(a.dataset.wa); a.target = "_blank"; a.rel = "noopener";
+});
+
+// Servicios y selector del formulario
+$("#lista").innerHTML = CONFIG.servicios.map(([n, d, p]) =>
+  `<li><div class="top"><h3>${n}</h3><span class="dots"></span><span class="price">$${p}</span></div><p>${d}</p></li>`).join("");
+$("#servicio").innerHTML += CONFIG.servicios.map(s => `<option>${s[0]}</option>`).join("");
+
+// Horarios, con el día de hoy resaltado y estado abierto/cerrado
+const hoy = new Date().getDay();
+$("#horas").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d => {
+  const [nombre, h] = CONFIG.horario[d];
+  return `<div class="row${d === hoy ? " today" : ""}"><span>${nombre}</span><span>${h ? h[0] + ":00 a " + h[1] + ":00" : "Cerrado"}</span></div>`;
+}).join("");
+const hh = CONFIG.horario[hoy][1], ahora = new Date().getHours() + new Date().getMinutes() / 60;
+const abierto = !!hh && ahora >= hh[0] && ahora < hh[1];
+$("#estado").textContent = abierto ? "Abierto ahora" : "Cerrado ahora";
+$("#estado").classList.toggle("on", abierto);
+
+// Ubicación y contacto
+$("#dir").textContent = CONFIG.direccion;
+$("#mapa").href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.direccion);
+$("#tel").textContent = CONFIG.whatsappVisible;
+$("#mail").textContent = CONFIG.correo;
+$("#mail").href = "mailto:" + CONFIG.correo;
+$("#anio").textContent = new Date().getFullYear();
+
+// Menú móvil
+const nav = $("#nav"), btnMenu = $("#btn-menu");
+const cerrarMenu = () => { nav.classList.remove("open"); btnMenu.setAttribute("aria-expanded", "false"); };
+btnMenu.onclick = () => btnMenu.setAttribute("aria-expanded", nav.classList.toggle("open"));
+nav.onclick = e => { if (e.target.tagName === "A") cerrarMenu(); };
+
+// Galería ampliada
+const lb = $("#lb");
+document.querySelectorAll(".tile").forEach(t => t.onclick = () => { $("#lb-img").textContent = t.textContent; lb.hidden = false; });
+lb.onclick = () => lb.hidden = true;
+document.onkeydown = e => { if (e.key === "Escape") lb.hidden = true; };
+
+// Formulario: arma el mensaje y abre WhatsApp
+$("#fecha").min = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+$("#form").onsubmit = e => {
+  e.preventDefault();
+  const [y, m, d] = $("#fecha").value.split("-");
+  window.open(wa(`Hola, soy ${$("#nombre").value}. Quisiera reservar: ${$("#servicio").value}, el ${d}/${m}/${y}. (Mensaje de prueba)`), "_blank");
+};
+</script>
+</body>
+</html>
