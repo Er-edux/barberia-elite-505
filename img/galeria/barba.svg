@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+<title>Ilustración: barba perfilada</title>
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="72%"><stop offset="0" stop-color="#231c0f"/><stop offset="1" stop-color="#050505"/></radialGradient>
+<linearGradient id="oro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d389"/><stop offset="1" stop-color="#b08a35"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8a24a"/><stop offset=".35" stop-color="#c8a24a"/><stop offset="1" stop-color="#c8a24a" stop-opacity="0"/></linearGradient>
+<linearGradient id="acero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#8e8e8e"/></linearGradient>
+<clipPath id="cabeza"><ellipse cx="400" cy="380" rx="120" ry="155"/></clipPath>
+
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<rect x="24" y="24" width="752" height="752" fill="none" stroke="#c8a24a" stroke-opacity=".35" stroke-width="2"/>
+<path d="M150 800 C170 690 260 650 345 630 L345 500 L455 500 L455 630 C540 650 630 690 650 800 Z" fill="#161616" stroke="#c8a24a" stroke-width="3"/>
+<ellipse cx="282" cy="395" rx="20" ry="40" fill="#1c1c1c" stroke="#c8a24a" stroke-width="3"/>
+<ellipse cx="518" cy="395" rx="20" ry="40" fill="#1c1c1c" stroke="#c8a24a" stroke-width="3"/>
+<ellipse cx="400" cy="380" rx="120" ry="155" fill="#1c1c1c" stroke="#c8a24a" stroke-width="3"/>
+<path d="M292 300 C288 232 336 204 400 204 C464 204 512 232 508 300 C478 288 440 284 400 286 C360 284 322 288 292 300 Z" fill="url(#oro)"/>
+<path d="M284 330 L290 440 C300 522 340 576 400 588 C460 576 500 522 510 440 L516 330 L500 330 C497 410 482 452 456 470 C430 460 370 460 344 470 C318 452 303 410 300 330 Z" fill="url(#oro)"/>
+<path d="M348 456 C368 438 390 440 400 450 C410 440 432 438 452 456 C430 466 412 462 400 457 C388 462 370 466 348 456 Z" fill="url(#oro)"/>
+<path d="M376 494 Q400 503 424 494" fill="none" stroke="#1c1c1c" stroke-width="5" stroke-linecap="round"/>
+<path d="M316 470 C330 520 360 552 392 560" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/><path d="M484 470 C470 520 440 552 408 560" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/><path d="M330 250 C352 228 382 220 412 222" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/><path d="M392 252 C420 236 450 236 476 244" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/>
+</svg>
