@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+<title>Ilustración: navaja de afeitar y brocha</title>
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="72%"><stop offset="0" stop-color="#231c0f"/><stop offset="1" stop-color="#050505"/></radialGradient>
+<linearGradient id="oro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d389"/><stop offset="1" stop-color="#b08a35"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8a24a"/><stop offset=".35" stop-color="#c8a24a"/><stop offset="1" stop-color="#c8a24a" stop-opacity="0"/></linearGradient>
+<linearGradient id="acero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#8e8e8e"/></linearGradient>
+<clipPath id="cabeza"><ellipse cx="400" cy="380" rx="120" ry="155"/></clipPath>
+
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<rect x="24" y="24" width="752" height="752" fill="none" stroke="#c8a24a" stroke-opacity=".35" stroke-width="2"/>
+
+<g transform="translate(0 -70)">
+<g transform="rotate(-24 400 330)">
+  <rect x="70" y="372" width="200" height="40" rx="20" fill="url(#oro)"/>
+  <path d="M250 352 H580 Q622 352 622 392 Q622 438 572 440 H262 Q246 440 246 424 V368 Q246 352 262 352 Z" fill="url(#acero)" stroke="#c8a24a" stroke-width="3"/>
+  <path d="M262 362 H574" stroke="#ffffff" stroke-opacity=".7" stroke-width="3"/>
+  <circle cx="262" cy="392" r="12" fill="#161616" stroke="#e4c373" stroke-width="4"/>
+</g>
+<path d="M486 590 C480 512 520 470 560 470 C600 470 640 512 634 590 Z" fill="#e9e3d3"/>
+<path d="M506 586 C504 530 528 498 552 494" fill="none" stroke="#bdb4a0" stroke-width="3"/>
+<path d="M596 500 C618 520 626 552 620 586" fill="none" stroke="#bdb4a0" stroke-width="3"/>
+<rect x="500" y="586" width="120" height="22" rx="6" fill="#8a6a25"/>
+<path d="M516 608 H604 L596 712 Q560 726 524 712 Z" fill="url(#oro)"/>
+<path d="M532 630 L540 702 M560 630 V708 M588 630 L580 702" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/>
+</g>
+
+</svg>

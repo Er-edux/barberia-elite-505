@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+<title>Ilustración: tijeras y peine de barbero</title>
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="72%"><stop offset="0" stop-color="#231c0f"/><stop offset="1" stop-color="#050505"/></radialGradient>
+<linearGradient id="oro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d389"/><stop offset="1" stop-color="#b08a35"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8a24a"/><stop offset=".35" stop-color="#c8a24a"/><stop offset="1" stop-color="#c8a24a" stop-opacity="0"/></linearGradient>
+<linearGradient id="acero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#8e8e8e"/></linearGradient>
+<clipPath id="cabeza"><ellipse cx="400" cy="380" rx="120" ry="155"/></clipPath>
+
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<rect x="24" y="24" width="752" height="752" fill="none" stroke="#c8a24a" stroke-opacity=".35" stroke-width="2"/>
+
+<g transform="translate(0 -70)">
+<g id="mitad">
+  <path d="M393 335 L238 116 C233 108 243 104 250 110 L412 325 Z" fill="url(#acero)" stroke="#c8a24a" stroke-width="2"/>
+  <path d="M396 340 L345 470" stroke="url(#oro)" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="330" cy="515" r="46" fill="none" stroke="url(#oro)" stroke-width="16"/>
+</g>
+<use href="#mitad" transform="translate(800 0) scale(-1 1)"/>
+<circle cx="400" cy="330" r="12" fill="#161616" stroke="#e4c373" stroke-width="4"/>
+<rect x="230" y="640" width="340" height="36" rx="10" fill="url(#oro)"/>
+<rect x="240" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="253" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="266" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="279" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="292" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="305" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="318" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="331" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="344" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="357" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="370" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="383" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="396" y="674" width="6" height="56" rx="3" fill="url(#oro)"/><rect x="409" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="422" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="435" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="448" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="461" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="474" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="487" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="500" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="513" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="526" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="539" y="674" width="6" height="44" rx="3" fill="url(#oro)"/><rect x="552" y="674" width="6" height="44" rx="3" fill="url(#oro)"/>
+</g>
+
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+<title>Ilustración: corte degradado</title>
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="72%"><stop offset="0" stop-color="#231c0f"/><stop offset="1" stop-color="#050505"/></radialGradient>
+<linearGradient id="oro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0d389"/><stop offset="1" stop-color="#b08a35"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8a24a"/><stop offset=".35" stop-color="#c8a24a"/><stop offset="1" stop-color="#c8a24a" stop-opacity="0"/></linearGradient>
+<linearGradient id="acero" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#8e8e8e"/></linearGradient>
+<clipPath id="cabeza"><ellipse cx="400" cy="380" rx="120" ry="155"/></clipPath>
+
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/>
+<rect x="24" y="24" width="752" height="752" fill="none" stroke="#c8a24a" stroke-opacity=".35" stroke-width="2"/>
+<path d="M150 800 C170 690 260 650 345 630 L345 500 L455 500 L455 630 C540 650 630 690 650 800 Z" fill="#161616" stroke="#c8a24a" stroke-width="3"/>
+<ellipse cx="282" cy="395" rx="20" ry="40" fill="#1c1c1c" stroke="#c8a24a" stroke-width="3"/>
+<ellipse cx="518" cy="395" rx="20" ry="40" fill="#1c1c1c" stroke="#c8a24a" stroke-width="3"/>
+<ellipse cx="400" cy="380" rx="120" ry="155" fill="#1c1c1c" stroke="#c8a24a" stroke-width="3"/><g clip-path="url(#cabeza)">
+<rect x="270" y="285" width="48" height="105" fill="url(#fade)"/>
+<rect x="482" y="285" width="48" height="105" fill="url(#fade)"/>
+<g><line x1="270" y1="315" x2="530" y2="315" stroke="#1c1c1c" stroke-opacity="0.15" stroke-width="2"/><line x1="270" y1="329" x2="530" y2="329" stroke="#1c1c1c" stroke-opacity="0.27" stroke-width="2"/><line x1="270" y1="343" x2="530" y2="343" stroke="#1c1c1c" stroke-opacity="0.39" stroke-width="2"/><line x1="270" y1="357" x2="530" y2="357" stroke="#1c1c1c" stroke-opacity="0.51" stroke-width="2"/><line x1="270" y1="371" x2="530" y2="371" stroke="#1c1c1c" stroke-opacity="0.63" stroke-width="2"/></g>
+</g>
+<path d="M290 305 C284 228 335 196 400 196 C465 196 516 228 510 305 C480 289 440 283 400 285 C360 283 320 289 290 305 Z" fill="url(#oro)"/>
+<path d="M318 270 C340 230 380 214 420 214" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/><path d="M350 280 C372 245 410 230 452 234" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/><path d="M392 282 C415 255 448 246 486 254" fill="none" stroke="#8a6a25" stroke-width="3" stroke-linecap="round"/>
+</svg>
